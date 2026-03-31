@@ -21,7 +21,7 @@
               <a href="./usuarios.html" class="btn btn-success btn-lg">
                 <i class="bi bi-people-fill me-2"></i>Ir a gestión de usuarios
               </a>
-              <a href="#modules-preview-root" class="btn btn-outline-light btn-lg">
+              <a href="./modulos.html" class="btn btn-outline-light btn-lg">
                 <i class="bi bi-grid-1x2-fill me-2"></i>Ver módulos
               </a>
             </div>

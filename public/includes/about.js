@@ -21,8 +21,7 @@
             <h2 class="section-title">¿Qué es TicoRecicla Connect?</h2>
             <p class="section-text">
               TicoRecicla Connect es una propuesta tecnológica orientada a fortalecer la
-              gestión de residuos sólidos mediante una plataforma digital conectada a una
-              base de datos NoSQL. Su propósito es integrar usuarios, materiales reciclables,
+              gestión de residuos sólidos mediante una plataforma digital. Su propósito es integrar usuarios, materiales reciclables,
               reportes, centros de acopio, incentivos y trazabilidad dentro de un mismo ecosistema.
             </p>
             <p class="section-text">

@@ -1,5 +1,5 @@
-(function renderNavbar() {
-  const root = document.getElementById("navbar-root");
+(function renderModulesNavbar() {
+  const root = document.getElementById("modules-navbar-root");
   if (!root) return;
 
   root.innerHTML = `
@@ -24,18 +24,15 @@
           TICO<span class="brand-green">RECICLA</span>
         </a>
 
-        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#modulesNav">
           <i class="bi bi-list fs-2"></i>
         </button>
 
-        <div class="collapse navbar-collapse" id="mainNav">
+        <div class="collapse navbar-collapse" id="modulesNav">
           <ul class="navbar-nav ms-auto gap-lg-3">
-            <li class="nav-item"><a class="nav-link active" href="./index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="./index.html#about-root">Proyecto</a></li>
-            <li class="nav-item"><a class="nav-link" href="./modulos.html">Módulos</a></li>
+            <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="./modulos.html">Módulos</a></li>
             <li class="nav-item"><a class="nav-link" href="./usuarios.html">Usuarios</a></li>
-            <li class="nav-item"><a class="nav-link" href="./index.html#ecosystem-preview-root">Ecosistema</a></li>
-            <li class="nav-item"><a class="nav-link" href="./index.html#footer-root">Contacto</a></li>
           </ul>
         </div>
       </div>
