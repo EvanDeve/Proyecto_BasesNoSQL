@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
  
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/HeladosMemphis', {
+    await mongoose.connect('mongodb://localhost:27017/proyectoCursos', {
     });
     console.log('MongoDB connected');
   } catch (err) {
