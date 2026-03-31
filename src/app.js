@@ -3,8 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const connectDB = require('./config/db');
-const itemRoutes = require('./routes/itemRoutes');
-const cursoRoutes = require('./routes/cursoRoutes');
+const usuarioRoutes = require('./routes/usuarioRoutes');
  
 const app = express();
  
@@ -21,8 +20,7 @@ app.get('/', (req, res) => {
 });
 
 // Rutas
-app.use('/api', itemRoutes);
-app.use('/api', cursoRoutes);
+app.use('/api', usuarioRoutes)
  
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
