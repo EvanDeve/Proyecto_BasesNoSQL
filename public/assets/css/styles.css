@@ -1,0 +1,343 @@
+:root {
+  --green: #99c24d;
+  --green-dark: #7ea53d;
+  --dark: #12161c;
+  --dark-2: #1b2028;
+  --dark-3: #222831;
+  --light: #f4f6f8;
+  --text: #293241;
+  --muted: #667085;
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f3f5f7;
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.topbar {
+  background: linear-gradient(90deg, #93c14f, #a7cf63);
+  color: #fff;
+  font-size: 0.92rem;
+}
+
+.topbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-navbar {
+  background: #2b2b2e;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.brand-green {
+  color: var(--green);
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.94rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--green) !important;
+}
+
+.hero-section {
+  min-height: 540px;
+  background:
+    linear-gradient(rgba(20, 24, 30, 0.78), rgba(20, 24, 30, 0.78)),
+    url("../img/hero-recycling.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(153, 194, 77, 0.16);
+  border: 1px solid rgba(153, 194, 77, 0.3);
+  color: #dff0bf;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.82rem;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.hero-title .green {
+  color: var(--green);
+}
+
+.hero-subtitle {
+  max-width: 760px;
+  color: #e6edf5;
+  font-size: 1.08rem;
+}
+
+.section-block {
+  padding: 72px 0;
+}
+
+.section-tag {
+  color: var(--green-dark);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.84rem;
+  margin-bottom: 0.4rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.section-text {
+  color: #5f6c7b;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.about-card,
+.module-card,
+.panel-card,
+.preview-card,
+.stat-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.about-card {
+  overflow: hidden;
+}
+
+.about-image {
+  width: 100%;
+  min-height: 320px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.module-card,
+.preview-card {
+  padding: 1.6rem;
+  height: 100%;
+  transition: 0.25s ease;
+}
+
+.module-card:hover,
+.preview-card:hover {
+  transform: translateY(-6px);
+}
+
+.module-icon,
+.preview-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #eef6df;
+  color: var(--green-dark);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.module-title,
+.preview-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+  color: #1f2937;
+}
+
+.module-text,
+.preview-text {
+  color: #66707d;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.97rem;
+}
+
+.status-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.status-active {
+  background: #e7f6cf;
+  color: #5a7f1d;
+}
+
+.status-soon {
+  background: #eef2f7;
+  color: #556070;
+}
+
+.users-section {
+  background: linear-gradient(180deg, #15181d 0%, #101318 100%);
+}
+
+.users-main-title {
+  color: white !important;
+}
+
+.users-main-text {
+  color: #c8d0da !important;
+}
+
+.panel-card {
+  padding: 1.5rem;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 0.8rem;
+}
+
+.form-text {
+  color: #5f6b7a;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  margin-bottom: 1.2rem;
+}
+
+.form-label {
+  font-weight: 700;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.custom-input {
+  background: #1f2937;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: white;
+  min-height: 44px;
+  font-size: 0.95rem;
+}
+
+.custom-input:focus {
+  background: #1f2937;
+  color: white;
+  border-color: var(--green);
+  box-shadow: 0 0 0 0.2rem rgba(153, 194, 77, 0.18);
+}
+
+.custom-input::placeholder {
+  color: #9eabba;
+}
+
+.table-dark.custom-table {
+  --bs-table-bg: #1b1f27;
+  --bs-table-striped-bg: #202530;
+  --bs-table-hover-bg: #242a35;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.custom-table thead th {
+  color: #cce3a1;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  font-size: 0.95rem;
+}
+
+.custom-table tbody td {
+  color: #edf2f7;
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.preview-section {
+  background: #f3f5f7;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.stat-label {
+  color: #697484;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--green-dark);
+}
+
+.footer {
+  background: #121418;
+  color: #c6cfda;
+}
+
+.footer-title {
+  color: white;
+  font-weight: 800;
+}
+
+.empty-state {
+  color: #98a4b3;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.alert {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    min-height: 440px;
+  }
+
+  .section-block {
+    padding: 56px 0;
+  }
+
+  .section-title,
+  .users-main-title {
+    font-size: 1.9rem;
+  }
+}
