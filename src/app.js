@@ -5,6 +5,9 @@ const cors = require('cors');
 const path = require('path');
 const connectDB = require('./config/db');
 const usuarioRoutes = require('./routes/usuarioRoutes');
+const residuoRoutes = require('./routes/residuoRoutes');
+const reporteRoutes = require('./routes/reporteRoutes');
+const centroRoutes = require('./routes/centroRoutes');
  
 const app = express();
  
@@ -22,7 +25,10 @@ app.get('/', (req, res) => {
 });
 
 // Rutas
-app.use('/api', usuarioRoutes)
+app.use('/api', usuarioRoutes);
+app.use('/api', residuoRoutes);
+app.use('/api', reporteRoutes);
+app.use('/api', centroRoutes);
  
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

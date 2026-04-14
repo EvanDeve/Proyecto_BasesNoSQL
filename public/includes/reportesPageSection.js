@@ -26,12 +26,12 @@
               <form id="crud-form" novalidate>
                 <input type="hidden" id="record-id" />
                 <div class="mb-3">
-                  <label for="usuario" class="form-label">Usuario</label>
-                  <input id="usuario" class="form-control custom-input" type="text" placeholder="Ej: María González" required />
+                  <label for="usuario_id" class="form-label">Usuario</label>
+                  <input id="usuario_id" class="form-control custom-input" type="text" placeholder="Ej: María González" required />
                 </div>
                 <div class="mb-3">
-                  <label for="material" class="form-label">Material reportado</label>
-                  <input id="material" class="form-control custom-input" type="text" placeholder="Ej: Cartón limpio" required />
+                  <label for="tipo_residuo" class="form-label">Material reportado</label>
+                  <input id="tipo_residuo" class="form-control custom-input" type="text" placeholder="Ej: Cartón limpio" required />
                 </div>
                 <div class="mb-3">
                   <label for="cantidad" class="form-label">Cantidad</label>

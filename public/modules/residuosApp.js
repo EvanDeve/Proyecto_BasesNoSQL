@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const app = window.createLocalCrudApp({
-    storageKey: 'ticorecicla_residuos',
+  const app = window.createRemoteCrudApp({
+    api: {
+      list: () => window.Api.getResiduos(),
+      create: (data) => window.Api.createResiduo(data),
+      update: (id, data) => window.Api.updateResiduo(id, data),
+      delete: (id) => window.Api.deleteResiduo(id)
+    },
     createTitle: 'Registrar residuo',
     editTitle: 'Editar residuo',
     fields: [

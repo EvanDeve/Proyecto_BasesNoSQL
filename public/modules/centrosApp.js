@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const app = window.createLocalCrudApp({
-    storageKey: 'ticorecicla_centros',
+  const app = window.createRemoteCrudApp({
+    api: {
+      list: () => window.Api.getCentros(),
+      create: (data) => window.Api.createCentro(data),
+      update: (id, data) => window.Api.updateCentro(id, data),
+      delete: (id) => window.Api.deleteCentro(id)
+    },
     createTitle: 'Registrar centro',
     editTitle: 'Editar centro',
     fields: [

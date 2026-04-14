@@ -1,19 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const app = window.createLocalCrudApp({
-    storageKey: 'ticorecicla_reportes',
+  const app = window.createRemoteCrudApp({
+    api: {
+      list: () => window.Api.getReportes(),
+      create: (data) => window.Api.createReporte(data),
+      update: (id, data) => window.Api.updateReporte(id, data),
+      delete: (id) => window.Api.deleteReporte(id)
+    },
     createTitle: 'Registrar reporte',
     editTitle: 'Editar reporte',
     fields: [
-      { id: 'usuario', required: true },
-      { id: 'material', required: true },
+      { id: 'usuario_id', required: true },
+      { id: 'tipo_residuo', required: true },
       { id: 'cantidad', required: true, transform: value => Number(value) },
       { id: 'ubicacion', required: true },
       { id: 'estado', required: true },
       { id: 'fecha', required: true }
     ],
     columns: [
-      { key: 'usuario' },
-      { key: 'material' },
+      { key: 'usuario_id' },
+      { key: 'tipo_residuo' },
       { key: 'cantidad' },
       { key: 'ubicacion' },
       { key: 'estado' },
