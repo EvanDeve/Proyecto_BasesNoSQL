@@ -10,26 +10,23 @@
           <h2 class="section-title">Módulos de TicoRecicla Connect</h2>
           <p class="section-text mx-auto" style="max-width: 750px;">
             La plataforma está diseñada para integrar múltiples componentes del ecosistema
-            de reciclaje. Actualmente solo el módulo de usuarios esta activo,
-            pero el sistema contempla una estructura mucho más amplia.
+            de reciclaje. Actualmente el módulo de usuarios está conectado al backend y los módulos de residuos, reportes de reciclaje y centros de acopio ya cuentan con interfaz funcional en frontend.
           </p>
         </div>
 
         <div class="row g-4">
-          ${createCard("Usuarios", "Activo", "people-fill", true)}
-          ${createCard("Residuos", "Próximamente", "box-seam")}
-          ${createCard("Reportes de reciclaje", "Próximamente", "clipboard-data")}
-          ${createCard("Centros de acopio", "Próximamente", "geo-alt")}
+          ${createCard("Usuarios", "Activo", "people-fill", true, "./usuarios.html")}
+          ${createCard("Residuos", "Frontend", "box-seam", true, "./residuos.html", "./residuos-publico.html")}
+          ${createCard("Reportes de reciclaje", "Frontend", "clipboard-data", true, "./reportes-reciclaje.html", "./reportes-publico.html")}
+          ${createCard("Centros de acopio", "Frontend", "geo-alt", true, "./centros-acopio.html", "./centros-publico.html")}
           ${createCard("Recolecciones", "Próximamente", "truck")}
           ${createCard("Incentivos", "Próximamente", "award")}
-          ${createCard("Rutas de recolección", "Próximamente", "signpost")}
-          ${createCard("Trazabilidad", "Próximamente", "clock-history")}
         </div>
       </div>
     </section>
   `;
 
-  function createCard(title, status, icon, active = false) {
+  function createCard(title, status, icon, active = false, href = "", publicHref = "") {
     return `
       <div class="col-md-6 col-xl-3">
         <div class="module-card">
@@ -46,14 +43,14 @@
           <p class="module-text">
             ${
               active
-                ? "Este módulo ya cuenta con CRUD funcional."
+                ? "Este módulo ya cuenta con administración y una vista pública de consulta dentro del proyecto."
                 : "Este componente forma parte del alcance de la plataforma y será integrado progresivamente."
             }
           </p>
 
           ${
             active
-              ? `<a href="./usuarios.html" class="btn btn-success btn-sm mt-3">Ir al módulo</a>`
+              ? `<div class="d-flex gap-2 flex-wrap mt-3"><a href="${href}" class="btn btn-success btn-sm">Administrar</a>${publicHref ? `<a href="${publicHref}" class="btn btn-outline-success btn-sm">Ver publicados</a>` : ""}</div>`
               : ""
           }
         </div>

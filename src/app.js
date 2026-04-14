@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 const connectDB = require('./config/db');
 const usuarioRoutes = require('./routes/usuarioRoutes');
  
@@ -13,10 +14,11 @@ connectDB();
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Ruta de prueba
 app.get('/', (req, res) => {
-  res.json({ mensaje: 'API funcionando correctamente (Items + Cursos)' });
+  res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 // Rutas

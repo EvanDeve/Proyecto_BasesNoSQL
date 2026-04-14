@@ -34,6 +34,10 @@
             <li class="nav-item"><a class="nav-link" href="./index.html#about-root">Proyecto</a></li>
             <li class="nav-item"><a class="nav-link" href="./modulos.html">Módulos</a></li>
             <li class="nav-item"><a class="nav-link" href="./usuarios.html">Usuarios</a></li>
+            <li class="nav-item"><a class="nav-link" href="./residuos.html">Residuos</a></li>
+            <li class="nav-item"><a class="nav-link" href="./reportes-reciclaje.html">Reportes</a></li>
+            <li class="nav-item"><a class="nav-link" href="./centros-acopio.html">Centros</a></li>
+            <li class="nav-item"><a class="nav-link" href="./residuos-publico.html">Consulta</a></li>
             <li class="nav-item"><a class="nav-link" href="./index.html#ecosystem-preview-root">Ecosistema</a></li>
             <li class="nav-item"><a class="nav-link" href="./index.html#footer-root">Contacto</a></li>
           </ul>
