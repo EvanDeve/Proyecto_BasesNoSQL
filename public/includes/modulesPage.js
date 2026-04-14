@@ -10,7 +10,7 @@
           <h2 class="section-title">Módulos de TicoRecicla Connect</h2>
           <p class="section-text mx-auto" style="max-width: 750px;">
             La plataforma está diseñada para integrar múltiples componentes del ecosistema
-            de reciclaje. Actualmente el módulo de usuarios está conectado al backend y los módulos de residuos, reportes de reciclaje y centros de acopio ya cuentan con interfaz funcional en frontend.
+            de reciclaje. Actualmente el módulo de usuarios está conectado al backend y los módulos de residuos, reportes de reciclaje, centros de acopio, recolecciones e incentivos ya cuentan con interfaz funcional en frontend.
           </p>
         </div>
 
@@ -19,8 +19,8 @@
           ${createCard("Residuos", "Frontend", "box-seam", true, "./residuos.html", "./residuos-publico.html")}
           ${createCard("Reportes de reciclaje", "Frontend", "clipboard-data", true, "./reportes-reciclaje.html", "./reportes-publico.html")}
           ${createCard("Centros de acopio", "Frontend", "geo-alt", true, "./centros-acopio.html", "./centros-publico.html")}
-          ${createCard("Recolecciones", "Próximamente", "truck")}
-          ${createCard("Incentivos", "Próximamente", "award")}
+          ${createSimpleActiveCard("Recolecciones", "Frontend", "truck", "./recolecciones.html", "Este módulo muestra rutas de recolección activas por zona, con horarios y puntos ilustrativos sobre el mapa de Costa Rica.")}
+          ${createSimpleActiveCard("Incentivos", "Frontend", "award", "./incentivos.html", "Este módulo presenta premios y recompensas que los usuarios pueden desbloquear según sus acciones y constancia en reciclaje.")}
         </div>
       </div>
     </section>
@@ -57,4 +57,32 @@
       </div>
     `;
   }
+
+  function createSimpleActiveCard(title, status, icon, href, text) {
+    return `
+      <div class="col-md-6 col-xl-3">
+        <div class="module-card">
+          <span class="status-badge status-active">
+            ${status}
+          </span>
+
+          <div class="module-icon">
+            <i class="bi bi-${icon}"></i>
+          </div>
+
+          <h3 class="module-title">${title}</h3>
+
+          <p class="module-text">
+            ${text}
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap mt-3">
+            <a href="${href}" class="btn btn-success btn-sm">Ver módulo</a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
 })();
+
+
