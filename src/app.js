@@ -15,6 +15,8 @@ const empresaRecicladoraRoutes = require('./routes/empresaRecicladoraRoutes');
 const rutaRecoleccionRoutes = require('./routes/rutaRecoleccionRoutes');
 const historialMaterialRoutes = require('./routes/historialMaterialRoutes');
 const notificacionRoutes = require('./routes/notificacionRoutes');
+const recicladorRoutes = require('./routes/recicladorRoutes');
+const recoleccionRoutes = require('./routes/recoleccionRoutes');
 
 const app = express();
 
@@ -42,6 +44,8 @@ app.use('/api', empresaRecicladoraRoutes);
 app.use('/api', rutaRecoleccionRoutes);
 app.use('/api', historialMaterialRoutes);
 app.use('/api', notificacionRoutes);
+app.use('/api', recicladorRoutes);
+app.use('/api', recoleccionRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

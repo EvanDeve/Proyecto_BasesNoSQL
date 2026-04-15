@@ -273,7 +273,39 @@ window.Api = (() => {
     });
   }
 
+  // ── Métodos genéricos usados por entityCrudApp / remoteCrudFactory ──
+  function list(endpoint) {
+    return request(`${API_ROOT}/${endpoint}`);
+  }
+
+  function create(endpoint, data) {
+    return request(`${API_ROOT}/${endpoint}`, {
+      method: "POST",
+      body: JSON.stringify(data)
+    });
+  }
+
+  function update(endpoint, id, data) {
+    return request(`${API_ROOT}/${endpoint}/${id}`, {
+      method: "PUT",
+      body: JSON.stringify(data)
+    });
+  }
+
+  function remove(endpoint, id) {
+    return request(`${API_ROOT}/${endpoint}/${id}`, {
+      method: "DELETE"
+    });
+  }
+
   return {
+    // Genéricos
+    list,
+    create,
+    update,
+    remove,
+
+    // Específicos (compatibilidad con app.js antiguo)
     getUsers,
     createUser,
     updateUser,
