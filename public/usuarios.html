@@ -3,34 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TicoRecicla Connect - Usuarios</title>
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-  />
+  <title>TicoRecicla Connect - Gestión de usuarios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
-<body>
+<body data-entity="usuarios">
   <div id="navbar-root"></div>
-  <div id="users-page-section-root"></div>
+  <div id="generic-crud-page-section-root"></div>
   <div id="footer-root"></div>
 
+  <script src="./modules/entityConfigs.js"></script>
   <script src="./includes/globalNavbar.js"></script>
-  <script src="./includes/usersPageSection.js"></script>
+  <script src="./includes/genericCrudPageSection.js"></script>
   <script src="./includes/footer.js"></script>
-
-  <script src="./modules/state.js"></script>
   <script src="./modules/api.js"></script>
-  <script src="./modules/alerts.js"></script>
-  <script src="./modules/usersTable.js"></script>
-  <script src="./modules/usersForm.js"></script>
-  <script src="./modules/app.js"></script>
-
+  <script src="./modules/remoteCrudFactory.js"></script>
+  <script src="./modules/entityCrudApp.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

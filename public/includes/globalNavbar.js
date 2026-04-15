@@ -9,62 +9,133 @@
   }
 
   const addMenuItems = [
-    {
-      href: "./usuarios.html",
-      icon: "bi-person-plus",
-      title: "Añadir usuarios",
-      active: isActive(["usuarios.html"])
-    },
-    {
-      href: "./residuos.html",
-      icon: "bi-box-seam",
-      title: "Añadir residuos",
-      active: isActive(["residuos.html"])
-    },
-    {
-      href: "./reportes-reciclaje.html",
-      icon: "bi-clipboard-plus",
-      title: "Añadir reportes",
-      active: isActive(["reportes-reciclaje.html"])
-    },
-    {
-      href: "./centros-acopio.html",
-      icon: "bi-geo-alt",
-      title: "Añadir centros",
-      active: isActive(["centros-acopio.html"])
-    }
-  ];
-
+  {
+    "href": "./usuarios.html",
+    "icon": "people-fill",
+    "title": "Añadir usuario"
+  },
+  {
+    "href": "./residuos.html",
+    "icon": "box-seam",
+    "title": "Añadir residuo"
+  },
+  {
+    "href": "./reportes-reciclaje.html",
+    "icon": "clipboard-data",
+    "title": "Añadir reporte de reciclaje"
+  },
+  {
+    "href": "./centros-acopio.html",
+    "icon": "geo-alt",
+    "title": "Añadir centro de acopio"
+  },
+  {
+    "href": "./recolecciones.html",
+    "icon": "truck",
+    "title": "Añadir recolección"
+  },
+  {
+    "href": "./incentivos.html",
+    "icon": "award",
+    "title": "Añadir incentivo"
+  },
+  {
+    "href": "./recicladores.html",
+    "icon": "person-badge",
+    "title": "Añadir reciclador"
+  },
+  {
+    "href": "./recompensas-usuario.html",
+    "icon": "gift",
+    "title": "Añadir recompensa de usuario"
+  },
+  {
+    "href": "./empresas-recicladoras.html",
+    "icon": "building",
+    "title": "Añadir empresa recicladora"
+  },
+  {
+    "href": "./rutas-recoleccion.html",
+    "icon": "signpost",
+    "title": "Añadir ruta de recolección"
+  },
+  {
+    "href": "./historial-materiales.html",
+    "icon": "clock-history",
+    "title": "Añadir historial de material"
+  },
+  {
+    "href": "./notificaciones.html",
+    "icon": "bell",
+    "title": "Añadir notificación"
+  }
+];
   const viewMenuItems = [
-    {
-      href: "./usuarios-publico.html",
-      icon: "bi-people",
-      title: "Ver usuarios",
-      active: isActive(["usuarios-publico.html"])
-    },
-    {
-      href: "./residuos-publico.html",
-      icon: "bi-box",
-      title: "Ver residuos",
-      active: isActive(["residuos-publico.html"])
-    },
-    {
-      href: "./reportes-publico.html",
-      icon: "bi-clipboard-data",
-      title: "Ver reportes",
-      active: isActive(["reportes-publico.html"])
-    },
-    {
-      href: "./centros-publico.html",
-      icon: "bi-building",
-      title: "Ver centros de acopio",
-      active: isActive(["centros-publico.html"])
-    }
-  ];
+  {
+    "href": "./usuarios-publico.html",
+    "icon": "people-fill",
+    "title": "Ver usuarios registrados"
+  },
+  {
+    "href": "./residuos-publico.html",
+    "icon": "box-seam",
+    "title": "Ver residuos valorizables"
+  },
+  {
+    "href": "./reportes-publico.html",
+    "icon": "clipboard-data",
+    "title": "Ver reportes de reciclaje"
+  },
+  {
+    "href": "./centros-publico.html",
+    "icon": "geo-alt",
+    "title": "Ver centros de acopio"
+  },
+  {
+    "href": "./recolecciones-publico.html",
+    "icon": "truck",
+    "title": "Ver recolecciones"
+  },
+  {
+    "href": "./incentivos-publico.html",
+    "icon": "award",
+    "title": "Ver incentivos"
+  },
+  {
+    "href": "./recicladores-publico.html",
+    "icon": "person-badge",
+    "title": "Ver recicladores"
+  },
+  {
+    "href": "./recompensas-usuario-publico.html",
+    "icon": "gift",
+    "title": "Ver recompensas de usuario"
+  },
+  {
+    "href": "./empresas-recicladoras-publico.html",
+    "icon": "building",
+    "title": "Ver empresas recicladoras"
+  },
+  {
+    "href": "./rutas-recoleccion-publico.html",
+    "icon": "signpost",
+    "title": "Ver rutas de recolección"
+  },
+  {
+    "href": "./historial-materiales-publico.html",
+    "icon": "clock-history",
+    "title": "Ver historial de materiales"
+  },
+  {
+    "href": "./notificaciones-publico.html",
+    "icon": "bell",
+    "title": "Ver notificaciones"
+  }
+];
 
   function renderMenuItems(items) {
     return items.map(item => `
-      <a href="${item.href}" class="tico-side-link ${item.active}">
+      <a href="${item.href}" class="tico-side-link ${isActive([item.href.replace('./','')])}">
         <span class="tico-side-left">
           <span class="tico-side-icon">
             <i class="bi ${item.icon}"></i>
@@ -104,25 +175,13 @@
 
         <div class="collapse navbar-collapse" id="ticoGlobalNav">
           <div class="tico-actions-wrap ms-lg-4 me-lg-4">
-            <button
-              class="tico-menu-btn"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#menuAgregarGlobal"
-              aria-controls="menuAgregarGlobal"
-            >
+            <button class="tico-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuAgregarGlobal" aria-controls="menuAgregarGlobal">
               <i class="bi bi-list"></i>
               <span>Añadir registros</span>
               <i class="bi bi-chevron-down"></i>
             </button>
 
-            <button
-              class="tico-menu-btn"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#menuVerGlobal"
-              aria-controls="menuVerGlobal"
-            >
+            <button class="tico-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuVerGlobal" aria-controls="menuVerGlobal">
               <i class="bi bi-list"></i>
               <span>Ver registros</span>
               <i class="bi bi-chevron-down"></i>
@@ -130,12 +189,8 @@
           </div>
 
           <ul class="navbar-nav ms-auto gap-lg-3">
-            <li class="nav-item">
-              <a class="nav-link tico-main-nav-link ${isActive(["index.html", ""])}" href="./index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link tico-main-nav-link ${isActive(["modulos.html"])}" href="./modulos.html">Módulos</a>
-            </li>
+            <li class="nav-item"><a class="nav-link tico-main-nav-link ${isActive(['index.html',''])}" href="./index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link tico-main-nav-link ${isActive(['modulos.html'])}" href="./modulos.html">Módulos</a></li>
           </ul>
         </div>
       </div>
@@ -143,30 +198,18 @@
 
     <div class="offcanvas offcanvas-start tico-offcanvas" tabindex="-1" id="menuAgregarGlobal" aria-labelledby="menuAgregarGlobalLabel">
       <div class="offcanvas-header tico-offcanvas-header">
-        <h5 class="offcanvas-title" id="menuAgregarGlobalLabel">
-          <i class="bi bi-grid me-2"></i>AÑADIR REGISTROS
-        </h5>
+        <h5 class="offcanvas-title" id="menuAgregarGlobalLabel"><i class="bi bi-grid me-2"></i>AÑADIR REGISTROS</h5>
         <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
       </div>
-      <div class="offcanvas-body p-0">
-        <div class="tico-side-list">
-          ${renderMenuItems(addMenuItems)}
-        </div>
-      </div>
+      <div class="offcanvas-body p-0"><div class="tico-side-list">${renderMenuItems(addMenuItems)}</div></div>
     </div>
 
     <div class="offcanvas offcanvas-start tico-offcanvas" tabindex="-1" id="menuVerGlobal" aria-labelledby="menuVerGlobalLabel">
       <div class="offcanvas-header tico-offcanvas-header">
-        <h5 class="offcanvas-title" id="menuVerGlobalLabel">
-          <i class="bi bi-grid me-2"></i>VER REGISTROS
-        </h5>
+        <h5 class="offcanvas-title" id="menuVerGlobalLabel"><i class="bi bi-grid me-2"></i>VER REGISTROS</h5>
         <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
       </div>
-      <div class="offcanvas-body p-0">
-        <div class="tico-side-list">
-          ${renderMenuItems(viewMenuItems)}
-        </div>
-      </div>
+      <div class="offcanvas-body p-0"><div class="tico-side-list">${renderMenuItems(viewMenuItems)}</div></div>
     </div>
   `;
 })();
